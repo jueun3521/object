@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 정보 객체</title>
+</head>
+<body>
+    <script>
+        // var today = new Date();
+        // console.log(today.toLocaleTimeString()); //시간
+        // console.log(today.toLocaleDateString()); //날짜
+
+        // var nowMonth = today.getMonth(), 
+        //     nowDate = today.getDate(),
+        //     nowDay = today.getDay();
+        // document.write(`<h1>오늘 날짜 정보</h1>`)
+        // document.write(`현재 월: ${nowMonth} <br>`)
+        // document.write(`현재 일: ${nowDate} <br>`)
+        // document.write(`현재 요일: ${nowDay} <br>`)
+
+
+        // var worldcup = new Date(2002 , 4 , 23);
+        // var theMonth = worldcup.getMonth(),
+        //     theDate = worldcup.getDate(),
+        //     theDay = worldcup.getDay();
+        // var weekdays = ["일" , "월" , "화" , "수", "목" , "금", "토"]
+        // var dayName = weekdays[theDay]
+
+        // document.write(`<h1>월드컵 날짜 정보</h1>`)
+        // document.write(`2002년 월드컵은 ${theDate}월 입니다 <br>`)
+
+
+        var tv = new Object();
+        tv.color = "white";
+        tv.price = "300000";
+        tv.info = function(){
+            document.write(`tv 색상 : ${this.color} <br>`);
+            document.write(`tv 가격 : ${this.price} <br>`);
+        }
+        var car = {
+            // color = 속성 black = 값
+            color : "black",
+            price : "5000000",
+            info: function(){
+                document.write(`car색상 : ${this.color} <br>`)
+                document.write(`car가격 : ${this.price} <br>`)
+            }
+        }
+        document.write (`<h1>tv 객체 매서드 호출</h1>`)
+        tv.info();
+        document.write (`<h1>car 객체 매서드 호출</h1>`)
+        car.info(); // = 출력을 해줘야 값이 나타남 (car에 있는 속성값 info를 불러옴)
+    </script>
+</body>
+</html>
